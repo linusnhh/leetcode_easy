@@ -1,8 +1,14 @@
+from configuration import candies, extraCandies, jewels, stones
+
+
 class Solution:
     def __init__(self):
         self.candies = candies
         self.extraCandies = extraCandies
+        self.jewels = jewels
+        self.stones = stones
 
+    # 1431
     def kidsWithCandies(self, candies, extraCandies):
         result = []
         for x in candies:
@@ -12,9 +18,22 @@ class Solution:
                 result.append(False)
         return result
 
+    # 771
+    def numJewelsInStones(self, jewels, stones):
+        jewels_list = list(set(list(jewels)))
+        counter = 0
+        stones_list = list(stones)
+        for jewel in jewels_list:
+            for stone in stones_list:
+                if jewel == stone:
+                    counter += 1
+        return counter
+
+
+easy = Solution()
 
 # 1431
-candies = [12, 1, 10]
-extraCandies = 10
-easy = Solution()
 print(easy.kidsWithCandies(candies, extraCandies))
+
+# 771
+print(easy.numJewelsInStones(jewels, stones))
