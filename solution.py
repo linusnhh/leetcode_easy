@@ -1,4 +1,4 @@
-from configuration import candies, extraCandies, jewels, stones, num
+from configuration import candies, extraCandies, jewels, stones, num, s
 
 
 class Solution:
@@ -41,6 +41,22 @@ class Solution:
                 counter += 1
         return counter
 
+    # 1859
+    def sortSentence(self, s):
+        l_of_words = s.split()
+        words_dict = {}
+        for word in l_of_words:
+            order = int(word[-1])
+            word = word[:-1]
+            words_dict[order] = word
+        word_list_s = sorted(words_dict.items())
+        sentence = []
+        for word_order in word_list_s:
+            sentence.append(word_order[1])
+        answer = ' '.join(sentence)
+        return answer
+
+
 easy = Solution()
 
 # 1431
@@ -51,3 +67,6 @@ print(easy.numJewelsInStones(jewels, stones))
 
 # 1342
 print(easy.numberOfSteps(num))
+
+# 1859
+print(easy.sortSentence(s))

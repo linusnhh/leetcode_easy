@@ -8,3 +8,6 @@ stones = "aAAbbbb"
 
 # 1342
 num = 14
+
+# 1859
+s = "is2 sentence4 This1 a3"
