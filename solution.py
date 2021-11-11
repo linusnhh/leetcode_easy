@@ -1,4 +1,4 @@
-from configuration import candies, extraCandies, jewels, stones, num, s
+from configuration import candies, extraCandies, jewels, stones, num, s, nums, target
 
 
 class Solution:
@@ -56,6 +56,13 @@ class Solution:
         answer = ' '.join(sentence)
         return answer
 
+    # 704
+    def search(self, nums, target):
+        if target in nums:
+            return nums.index(target)
+        else:
+            return -1
+
 
 easy = Solution()
 
@@ -70,3 +77,6 @@ print(easy.numberOfSteps(num))
 
 # 1859
 print(easy.sortSentence(s))
+
+# 704
+print(easy.search(nums, target))
