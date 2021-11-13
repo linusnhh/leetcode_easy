@@ -63,6 +63,15 @@ class Solution:
         else:
             return -1
 
+    # 35
+    def searchInsert(self, nums, target):
+        try:
+            return nums.index(target)
+        except ValueError:
+            nums.append(target)
+            nums.sort()
+            return nums.index(target)
+
 
 easy = Solution()
 
@@ -80,3 +89,6 @@ print(easy.sortSentence(s))
 
 # 704
 print(easy.search(nums, target))
+
+# 35
+print(easy.searchInsert(nums, target))
