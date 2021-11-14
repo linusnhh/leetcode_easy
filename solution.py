@@ -72,6 +72,11 @@ class Solution:
             nums.sort()
             return nums.index(target)
 
+    def sortedSquares(self, nums):
+        sq_nums = [i**2 for i in nums]
+        sq_nums.sort()
+        return sq_nums
+
 
 easy = Solution()
 
@@ -92,3 +97,6 @@ print(easy.search(nums, target))
 
 # 35
 print(easy.searchInsert(nums, target))
+
+# 997
+print(easy.sortedSquares(nums))
