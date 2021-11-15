@@ -13,5 +13,5 @@ num = 14
 s = "is2 sentence4 This1 a3"
 
 # 704
-nums = [1, 3, 5, 6]
+nums = [0, 1, 0, 3, 12]
 target = 0

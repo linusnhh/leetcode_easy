@@ -1,28 +1,42 @@
-from configuration import candies, extraCandies, jewels, stones, num, s, nums, target
+# from configuration import candies, extraCandies, jewels, stones, num, s, target
 
 
 class Solution:
-    def __init__(self):
+    def __init__(self, candies, extraCandies, nums, jewels, stones, num, s, target):
         self.candies = candies
         self.extraCandies = extraCandies
+        self.nums = nums
         self.jewels = jewels
         self.stones = stones
+        self.num = num
+        self.s = s
+        self.target = target
 
     # 1431
-    def kidsWithCandies(self, candies, extraCandies):
+    def kidsWithCandies(self):
         result = []
-        for x in candies:
-            if x + extraCandies >= max(candies):
+        for candy in self.candies:
+            if candy + self.extraCandies >= max(self.candies):
                 result.append(True)
             else:
                 result.append(False)
         return result
 
+    # 283
+    def moveZeroes(self):
+        for num in self.nums:
+            if num == 0:
+                self.nums.remove(num)
+                self.nums.append(num)
+            else:
+                self.nums = self.nums
+        return self.nums
+
     # 771
-    def numJewelsInStones(self, jewels, stones):
-        jewels_list = list(set(list(jewels)))
+    def numJewelsInStones(self):
+        jewels_list = list(set(list(self.jewels)))
         counter = 0
-        stones_list = list(stones)
+        stones_list = list(self.stones)
         for jewel in jewels_list:
             for stone in stones_list:
                 if jewel == stone:
@@ -30,20 +44,20 @@ class Solution:
         return counter
 
     # 1342
-    def numberOfSteps(self, num):
+    def numberOfSteps(self):
         counter = 0
-        while num != 0:
-            if num % 2 == 0:
-                num = num / 2
+        while self.num != 0:
+            if self.num % 2 == 0:
+                self.num = self.num / 2
                 counter += 1
-            elif num % 2 != 0:
-                num = num - 1
+            elif self.num % 2 != 0:
+                self.num = self.num - 1
                 counter += 1
         return counter
 
     # 1859
-    def sortSentence(self, s):
-        l_of_words = s.split()
+    def sortSentence(self):
+        l_of_words = self.s.split()
         words_dict = {}
         for word in l_of_words:
             order = int(word[-1])
@@ -57,46 +71,23 @@ class Solution:
         return answer
 
     # 704
-    def search(self, nums, target):
-        if target in nums:
-            return nums.index(target)
+    def search(self):
+        if self.target in self.nums:
+            return self.nums.index(self.target)
         else:
             return -1
 
     # 35
-    def searchInsert(self, nums, target):
+    def searchInsert(self):
         try:
-            return nums.index(target)
+            return self.nums.index(self.target)
         except ValueError:
-            nums.append(target)
-            nums.sort()
-            return nums.index(target)
+            self.nums.append(self.target)
+            self.nums.sort()
+            return self.nums.index(self.target)
 
-    def sortedSquares(self, nums):
-        sq_nums = [i**2 for i in nums]
+    # 977
+    def sortedSquares(self):
+        sq_nums = [i ** 2 for i in self.nums]
         sq_nums.sort()
         return sq_nums
-
-
-easy = Solution()
-
-# 1431
-print(easy.kidsWithCandies(candies, extraCandies))
-
-# 771
-print(easy.numJewelsInStones(jewels, stones))
-
-# 1342
-print(easy.numberOfSteps(num))
-
-# 1859
-print(easy.sortSentence(s))
-
-# 704
-print(easy.search(nums, target))
-
-# 35
-print(easy.searchInsert(nums, target))
-
-# 997
-print(easy.sortedSquares(nums))

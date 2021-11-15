@@ -1,16 +1,22 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
+from config import candies, extraCandies, nums, jewels, stones, num, s, target
+from solution import Solution
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    answer = Solution(candies, extraCandies, nums, jewels, stones, num, s, target)
+    print('Challenge: 1431')
+    print(answer.kidsWithCandies())
+    print('Challenge: 283')
+    print(answer.moveZeroes())
+    print('Challenge: 771')
+    print(answer.numJewelsInStones())
+    print('Challenge: 1342')
+    print(answer.numberOfSteps())
+    print('Challenge: 1859')
+    print(answer.sortSentence())
+    print('Challenge: 704')
+    print(answer.search())
+    print('Challenge: 35')
+    print(answer.searchInsert())
+    print('Challenge: 977')
+    print(answer.sortedSquares())
