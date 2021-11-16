@@ -2,7 +2,7 @@
 
 
 class Solution:
-    def __init__(self, candies, extraCandies, nums, jewels, stones, num, s, target):
+    def __init__(self, candies, extraCandies, nums, jewels, stones, num, s, target, numbers):
         self.candies = candies
         self.extraCandies = extraCandies
         self.nums = nums
@@ -11,6 +11,7 @@ class Solution:
         self.num = num
         self.s = s
         self.target = target
+        self.numbers = numbers
 
     # 1431
     def kidsWithCandies(self):
@@ -91,3 +92,16 @@ class Solution:
         sq_nums = [i ** 2 for i in self.nums]
         sq_nums.sort()
         return sq_nums
+
+    # 167
+    def twoSum(self):
+        i = 0
+        j = len(self.numbers) - 1
+
+        while i < j:
+            if self.numbers[i] + self.numbers[j] < self.target:
+                i += 1
+            elif self.numbers[i] + self.numbers[j] > self.target:
+                j -= 1
+            else:
+                return [i + 1, j + 1]

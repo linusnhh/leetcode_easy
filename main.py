@@ -1,9 +1,9 @@
-from config import candies, extraCandies, nums, jewels, stones, num, s, target
+from config import candies, extraCandies, nums, jewels, stones, num, s, target, numbers
 from solution import Solution
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    answer = Solution(candies, extraCandies, nums, jewels, stones, num, s, target)
+    answer = Solution(candies, extraCandies, nums, jewels, stones, num, s, target, numbers)
     print('Challenge: 1431')
     print(answer.kidsWithCandies())
     print('Challenge: 283')
@@ -20,3 +20,6 @@ if __name__ == '__main__':
     print(answer.searchInsert())
     print('Challenge: 977')
     print(answer.sortedSquares())
+    print('Challenge: 167')
+    print(answer.twoSum())
+

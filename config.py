@@ -15,3 +15,6 @@ s = "is2 sentence4 This1 a3"
 # 704
 nums = [0, 1, 0, 3, 12]
 target = 0
+
+# 167
+numbers = [0, 0, 3, 4]
