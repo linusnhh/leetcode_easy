@@ -22,6 +22,9 @@ if __name__ == '__main__':
     print(answer.sortedSquares())
     print('Challenge: 167')
     print(answer.twoSum())
-    print('Challenge: ')
+    print('Challenge: 344')
     answer.reverseString()
+    print('Challenge: 557')
+    print(answer.reverseWords())
+
 

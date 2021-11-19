@@ -111,3 +111,15 @@ class Solution:
     def reverseString(self):
         self.s_lst.reverse()
         print(self.s_lst)
+
+    # 557
+    def reverseWords(self):
+        split_s = self.s.split(' ')
+        result = []
+        for word in split_s:
+            character_lst = list(word)
+            character_lst.reverse()
+            rev_word = ''.join(character_lst)
+            result.append(rev_word)
+        result = ' '.join(result)
+        return result
