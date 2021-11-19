@@ -2,7 +2,7 @@
 
 
 class Solution:
-    def __init__(self, candies, extraCandies, nums, jewels, stones, num, s, target, numbers):
+    def __init__(self, candies, extraCandies, nums, jewels, stones, num, s, target, numbers, s_lst):
         self.candies = candies
         self.extraCandies = extraCandies
         self.nums = nums
@@ -12,6 +12,7 @@ class Solution:
         self.s = s
         self.target = target
         self.numbers = numbers
+        self.s_lst = s_lst
 
     # 1431
     def kidsWithCandies(self):
@@ -105,3 +106,8 @@ class Solution:
                 j -= 1
             else:
                 return [i + 1, j + 1]
+
+    # 344
+    def reverseString(self):
+        self.s_lst.reverse()
+        print(self.s_lst)
