@@ -1,9 +1,11 @@
-from config import candies, extraCandies, nums, jewels, stones, num, s, target, numbers, s_lst, indices, nums_1365
+from config import candies, extraCandies, nums, jewels, stones, num, s, target, numbers, s_lst, indices, nums_1365, \
+    operations
 from solution import Solution
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    answer = Solution(candies, extraCandies, nums, jewels, stones, num, s, target, numbers, s_lst, indices, nums_1365)
+    answer = Solution(candies, extraCandies, nums, jewels, stones, num, s, target, numbers, s_lst, indices, nums_1365,
+                      operations)
     print('Challenge: 1431')
     print(answer.kidsWithCandies())
     print('Challenge: 283')
@@ -32,5 +34,7 @@ if __name__ == '__main__':
     print(answer.smallerNumbersThanCurrent())
     print('Challenge: 709')
     print(answer.toLowerCase())
+    print('Challenge: 2011')
+    print(answer.finalValueAfterOperations())
 
 

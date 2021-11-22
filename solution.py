@@ -1,5 +1,6 @@
 class Solution:
-    def __init__(self, candies, extraCandies, nums, jewels, stones, num, s, target, numbers, s_lst, indices, nums_1365):
+    def __init__(self, candies, extraCandies, nums, jewels, stones, num, s, target, numbers, s_lst, indices, nums_1365,
+                 operations):
         self.candies = candies
         self.extraCandies = extraCandies
         self.nums = nums
@@ -12,6 +13,7 @@ class Solution:
         self.s_lst = s_lst
         self.indices = indices
         self.nums_1365 = nums_1365
+        self.operations = operations
 
     # 1431
     def kidsWithCandies(self):
@@ -143,3 +145,12 @@ class Solution:
 
     def toLowerCase(self):
         return self.s.lower()
+
+    def finalValueAfterOperations(self):
+        X = 0
+        for operator in self.operations:
+            if '-' in operator:
+                X -= 1
+            else:
+                X += 1
+        return X
