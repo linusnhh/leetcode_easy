@@ -140,3 +140,6 @@ class Solution:
                     counter += 1
             answer.append(counter)
         return answer
+
+    def toLowerCase(self):
+        return self.s.lower()

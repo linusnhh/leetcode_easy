@@ -30,5 +30,7 @@ if __name__ == '__main__':
     print(answer.restoreString())
     print('Challenge: 1365')
     print(answer.smallerNumbersThanCurrent())
+    print('Challenge: 709')
+    print(answer.toLowerCase())
 
 
