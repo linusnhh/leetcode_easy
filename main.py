@@ -1,9 +1,9 @@
-from config import candies, extraCandies, nums, jewels, stones, num, s, target, numbers, s_lst
+from config import candies, extraCandies, nums, jewels, stones, num, s, target, numbers, s_lst, indices
 from solution import Solution
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    answer = Solution(candies, extraCandies, nums, jewels, stones, num, s, target, numbers, s_lst)
+    answer = Solution(candies, extraCandies, nums, jewels, stones, num, s, target, numbers, s_lst, indices)
     print('Challenge: 1431')
     print(answer.kidsWithCandies())
     print('Challenge: 283')
@@ -26,5 +26,7 @@ if __name__ == '__main__':
     answer.reverseString()
     print('Challenge: 557')
     print(answer.reverseWords())
+    print('Challenge: 1528')
+    print(answer.restoreString())
 
 

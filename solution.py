@@ -2,7 +2,7 @@
 
 
 class Solution:
-    def __init__(self, candies, extraCandies, nums, jewels, stones, num, s, target, numbers, s_lst):
+    def __init__(self, candies, extraCandies, nums, jewels, stones, num, s, target, numbers, s_lst, indices):
         self.candies = candies
         self.extraCandies = extraCandies
         self.nums = nums
@@ -13,6 +13,7 @@ class Solution:
         self.target = target
         self.numbers = numbers
         self.s_lst = s_lst
+        self.indices = indices
 
     # 1431
     def kidsWithCandies(self):
@@ -123,3 +124,11 @@ class Solution:
             result.append(rev_word)
         result = ' '.join(result)
         return result
+
+    def restoreString(self):
+        s_ind = dict(zip(self.indices, self.s_lst))
+        answer = []
+        for k, v in sorted(s_ind.items()):
+            answer.append(v)
+
+        return "".join(answer)
