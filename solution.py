@@ -1,8 +1,5 @@
-# from configuration import candies, extraCandies, jewels, stones, num, s, target
-
-
 class Solution:
-    def __init__(self, candies, extraCandies, nums, jewels, stones, num, s, target, numbers, s_lst, indices):
+    def __init__(self, candies, extraCandies, nums, jewels, stones, num, s, target, numbers, s_lst, indices, nums_1365):
         self.candies = candies
         self.extraCandies = extraCandies
         self.nums = nums
@@ -14,6 +11,7 @@ class Solution:
         self.numbers = numbers
         self.s_lst = s_lst
         self.indices = indices
+        self.nums_1365 = nums_1365
 
     # 1431
     def kidsWithCandies(self):
@@ -132,3 +130,13 @@ class Solution:
             answer.append(v)
 
         return "".join(answer)
+
+    def smallerNumbersThanCurrent(self):
+        answer = []
+        for x in self.nums_1365:
+            counter = 0
+            for element in self.nums_1365:
+                if x > element:
+                    counter += 1
+            answer.append(counter)
+        return answer
